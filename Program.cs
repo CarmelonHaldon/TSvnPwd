@@ -20,11 +20,26 @@ class Program {
 
   static void Main(string[] args) {
 
-    bool interactive = true;
-    if (args.Length > 0 && args[1].ToUpper() == "-S") interactive = false;  // Silent (no prompt) switch
+
+
+	// TODO CarmelonHaldon: ...
+//    bool interactive = true;
+//
+//    if (args.Length > 0 && args[1].ToUpper() == "-S") interactive = false;  // Silent (no prompt) switch
+    bool interactive = false;
+
+
 
     try {
-      Run();
+
+
+
+	// TODO CarmelonHaldon: ...
+//      Run();
+      Run(args[0]);
+
+
+
     } catch (Exception e) {
       Console.WriteLine();
       Console.WriteLine(e.Message);
@@ -38,14 +53,26 @@ class Program {
     }
   }
 
-  static void Run() {
+
+
+	// TODO CarmelonHaldon: ...
+//  static void Run() {
+  static void Run(string folder) {
+
+
       
     // Show version and introductory info
     Console.WriteLine("TortoiseSVN Password Decrypter v" + Version());
     Console.WriteLine("The original version of this program was created by Leapbeyond Solutions.");
 
-    // Look for password files
-    string folder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AUTHFILE_SUBPATH);
+
+
+	// TODO CarmelonHaldon: ...
+//    // Look for password files
+//    string folder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AUTHFILE_SUBPATH);
+
+
+
     if (!Directory.Exists(folder)) ExitWithError("Path not found: " + folder);
     string[] files = Directory.GetFiles(folder, new String('?', 32)); // Password filenames appear to be 32 characters in length
     if (files.Length < 1) ExitWithError("No files with exactly 32 characters in the filename found in " + folder);

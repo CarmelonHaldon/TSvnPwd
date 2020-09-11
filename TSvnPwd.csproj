@@ -10,7 +10,16 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TSvnPwd</RootNamespace>
     <AssemblyName>TSvnPwd</AssemblyName>
+
+
+
+<!-- TODO CarmelonHaldon: ...
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+-->
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+
+
+
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
